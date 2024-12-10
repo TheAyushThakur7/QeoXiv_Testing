@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QeoXiv Speech-to-Text Converter</title>
+    <link rel="stylesheet" href="SPT.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>QeoXiv <br>Speech to Text Converter</h1>
+        <p>Upload an audio file to convert speech to text instantly with QeoXiv.</p>
+
+        <form id="audio-form" enctype="multipart/form-data">
+            <input type="file" id="audio-file" name="audio-file" accept="audio/*" required>
+            <button type="submit">Upload & Convert</button>
+        </form>
+
+        <div id="result">
+            <h2>Transcription Result:</h2>
+            <textarea id="transcription-text" readonly>Your transcription will appear here.</textarea>
+    <button id="copy-button" disabled>Copy Text</button> <!-- Initially disabled -->
+        </div>
+    </div>
+
+    <script src="SPT.js"></script>
+</body>
+</html>

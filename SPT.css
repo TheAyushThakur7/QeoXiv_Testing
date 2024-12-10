@@ -1,0 +1,119 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #121212; /* Dark background */
+    color: #fff; /* White text for better readability */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    background: #1f1f1f; /* Darker background for the container */
+    padding: 50px 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 600px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+h1 {
+    font-size: 2.3em;
+    font-weight: 600;
+    color: #ff7e5f; /* Accent color for heading */
+    margin-bottom: 15px;
+    word-wrap: break-word; /* Ensures text wraps into two lines if needed */
+}
+
+p {
+    color: #ccc; /* Lighter text color */
+    font-size: 1.1em;
+    margin-bottom: 30px;
+}
+
+form input[type="file"] {
+    padding: 12px;
+    font-size: 1em;
+    margin-right: 10px;
+    border: 2px solid #ff7e5f; /* Accent color for input */
+    border-radius: 30px;
+    outline: none;
+    background-color: #333; /* Dark background for input */
+    color: #fff;
+    width: 100%;
+    box-sizing: border-box; /* Fix for input size */
+    margin-bottom: 20px; /* Adds space between file input and button */
+}
+
+form button {
+    padding: 12px 25px;
+    font-size: 1em;
+    background: #ff7e5f; /* Button background color */
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover {
+    background: #feb47b; /* Lighter accent on hover */
+    transform: scale(1.05);
+}
+
+#result {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #333; /* Dark background for the result box */
+    border-radius: 15px;
+    border: 1px solid #444; /* Subtle border */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: left;
+}
+
+#transcription-text {
+    width: 100%;
+    height: 150px;
+    background-color: #222; /* Dark background for textarea */
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 12px;
+    font-size: 1.2em;
+    resize: none; /* Disable resizing */
+    margin-bottom: 20px;
+}
+
+#copy-button {
+    padding: 10px 20px;
+    background: #4a5f73; /* Button color for copy action */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#copy-button:hover {
+    background: #2e3a59; /* Darker button on hover */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

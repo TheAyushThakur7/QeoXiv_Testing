@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QeoXiv - AI Video Automation</title>
+    <link rel="stylesheet" href="styles.css">
+          
+    <script type="application/javascript">
+        (function(w,d,s,o,f,js,fjs){w[o]=w[o]||function(){(w[o].q=w[o].q||[]).push(arguments);};
+        (js=d.createElement(s)),(fjs=d.getElementsByTagName(s)[0]);
+        js.id=o;js.src=f;js.async=1;js.referrerPolicy = "origin";
+        fjs.parentNode.insertBefore(js,fjs);})(window,document,"script","copilot","https://script.copilot.live/v1/copilot.min.js?tkn=cat-6v7iezmm");
+        copilot("init",{});
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="https://i.ibb.co/h1JRDND/design-a-modern-minimalistic-logo-for-the-brand-na-8-We01-Pl-XTNe-Vjti5h-C0nfg-CN7-XDoc-SIWDCg5-m9jq.jpg" alt="QeoXiv Logo" class="logo">
+            <h1>QeoXiv</h1>
+            <p class="tagline">AI tools to make video creation fast and easy</p>
+            <a href="#services" class="cta-button">Get Started</a>
+        </div>
+    </header>
+
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <div class="service-card">
+            <a href="SPT.html" class="service-link">
+                <h3>Voice to Text</h3>
+                <p>Convert your voice into <br> accurate text in seconds.</p>
+            </a>
+        </div>
+        <div class="service-card">
+            <a href="comingsoon.html" class="service-link">
+                <h3>Text to Speech</h3>
+                <p>Convert your text into<br> realistic speech <br>effortlessly.</p>
+                <span class="coming-soon-badge">Coming Soon</span>
+            </a>
+        </div>
+        <div class="service-card">
+            <a href="comingsoon.html" class="service-link">
+                <h3>Make Photos <br>Speak</h3>
+                <p>Makes the person in<br> an image speak.</p>
+                <span class="coming-soon-badge">Coming Soon</span>
+            </a>
+        </div>
+        <div class="service-card">
+            <a href="comingsoon.html" class="service-link">
+                <h3>Video Collage</h3>
+                <p>Create stunning video <br>collages with ease.</p>
+                <span class="coming-soon-badge">Coming Soon</span>
+            </a>
+        </div>        
+        <div class="service-card">
+            <a href="comingsoon.html" class="service-link">
+                <h3>AI Captioning</h3>
+                <p>Automatically generate <br>captions for your videos.</p>
+                <span class="coming-soon-badge">Coming Soon</span>
+            </a>
+        </div>
+    </section>
+
+    <section id="feedback" class="feedback">
+        <div class="container">
+            <p>Please give us your feedback by clicking the button below. Your feedback is valuable to us.<br><br>Made by Ayush Thakur.<br><br></p>
+            <a href="https://yogxirpbuz4.typeform.com/to/c0InMzc3" class="feedback-button">Give Feedback</a>
+        </div>
+    </section>
+<div id="overlay" class="overlay"></div>
+<div id="popup" class="popup">
+    <h3>Stay Updated with QeoXiv</h3>
+    <p>Would you like to receive the latest updates on new features and developments of QeoXiv?</p>
+    <button onclick="openForm()">Yes, Keep Me Updated!</button>
+    <button onclick="closePopup('no')">No, Thanks</button>
+</div>
+
+<script>
+    // Default delay time (1 minute in milliseconds)
+    let delayTime = localStorage.getItem('delayTime') ? parseInt(localStorage.getItem('delayTime')) : 60000; // 1 minute (60,000 ms)
+    
+    // Function to show the pop-up after the delay time
+    function showPopup() {
+        document.getElementById('popup').style.display = 'block';
+        document.getElementById('overlay').style.display = 'block';
+    }
+
+    // Check if the user has already dismissed or accepted the pop-up
+    let popupShown = localStorage.getItem('popupShown') === 'true';
+    let popupDismissed = localStorage.getItem('popupDismissed') === 'true';
+
+    // If the user hasn't selected "Yes" or "No", show the pop-up after the delay
+    if (!popupShown && !popupDismissed) {
+        setTimeout(() => {
+            if (!popupShown && !popupDismissed) {
+                showPopup();
+            }
+        }, delayTime); // Delay time
+    }
+
+    // Function to open the form in a new tab
+    function openForm() {
+        window.open('form.html', '_blank'); // Replace 'form.html' with the path to your form page
+        localStorage.setItem('popupShown', 'true'); // Set flag to true after form submission
+        closePopup();
+    }
+
+    // Function to close the pop-up
+    function closePopup(action) {
+        document.getElementById('popup').style.display = 'none';
+        document.getElementById('overlay').style.display = 'none';
+
+        if (action === 'no') {
+            // If the user clicks "No", increase the delay time by 15 minutes
+            delayTime += 900000; // Add 15 minutes (900,000 ms)
+            localStorage.setItem('delayTime', delayTime); // Save the updated delay time
+            localStorage.setItem('popupDismissed', 'true'); // Mark as dismissed
+        } else {
+            // Mark the pop-up as shown once the user clicks "Yes"
+            localStorage.setItem('popupShown', 'true');
+        }
+    }
+</script>    
+    <footer>
+        <p>&copy; 2024 QeoXiv. All rights reserved.</p>
+    </footer>
+</body>
+</html>

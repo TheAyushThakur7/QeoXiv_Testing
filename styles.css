@@ -1,0 +1,264 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #fff;
+    line-height: 1.6;
+}
+
+header {
+    height: 100vh;
+    background: linear-gradient(135deg, #0f0f0f, #222);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+header .container {
+    max-width: 1200px;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.tagline {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    font-weight: 300;
+    color: #aaa;
+}
+
+.cta-button {
+    background-color: #007bff;
+    padding: 15px 30px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}
+
+#services {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #181818;
+}
+
+#services h2 {
+    font-size: 2.5rem;
+    color: #007bff;
+    margin-bottom: 40px;
+}
+
+/* Service Cards */
+/* Service Cards */
+.service-card {
+    background-color: #222;
+    padding: 20px;
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    display: inline-block;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    overflow: hidden; /* Ensures no overflow issues */
+    min-height: 226px; /* Increased height for better spacing */
+}
+
+.service-card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 10px; /* Adjusted for spacing */
+    color: #fff;
+}
+
+.service-card p {
+    font-size: 1.1rem;
+    color: #aaa;
+    overflow: hidden; /* Ensures clean layout */
+    text-overflow: ellipsis; /* Handles overflowing text */
+    white-space: normal; /* Allows text to wrap */
+    line-height: 1.4; /* Better readability */
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+.service-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.service-link:hover h3, .service-link:hover p {
+    color: #007bff;
+}
+
+/* Coming Soon Badge */
+.coming-soon-badge {
+    display: inline-block;
+    background-color: #ff9800;
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Adjust text alignment to handle overflow */
+.service-card h3, .service-card p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+/* Feedback Section */
+.feedback {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #181818;
+    margin-top: 30px;
+    border-top: 2px solid #333;
+}
+
+.feedback p {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.feedback-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.feedback-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-5px);
+}
+footer {
+    background-color: #181818; /* Dark background for contrast */
+    padding: 30px 20px; /* Spacing for a comfortable design */
+    text-align: center; /* Center-align text */
+    color: #aaa; /* Subtle text color */
+    border-top: 2px solid #333; /* Clean border at the top */
+    font-size: 1rem; /* Standard font size */
+}
+
+footer p {
+    margin: 0; /* Remove unnecessary margin */
+    line-height: 1.6; /* Improve readability */
+    font-family: 'Arial', sans-serif; /* Consistent typography */
+}
+
+footer p:hover {
+    color: #007bff; /* Interactive hover effect */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Add a subtle animation */
+footer {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 999;
+}
+
+/* Pop-up */
+.popup {
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    width: 60%;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 1000;
+    text-align: center;
+}
+
+.popup h3 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.popup p {
+    color: #555;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.popup button {
+    background-color: #0066ff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.popup button:hover {
+    background-color: #0055cc;
+}
+
+/* Button for "No, Thanks" */
+.popup button:last-child {
+    background-color: #f44336;
+}
+
+.popup button:last-child:hover {
+    background-color: #d32f2f;
+}
